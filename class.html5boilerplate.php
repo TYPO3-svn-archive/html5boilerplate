@@ -25,8 +25,6 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
-
 /**
  * Html5boilerplate main class
  * Includes a render postProcess hook of t3lib_PageRenderer to manipulate
@@ -36,14 +34,7 @@ require_once(PATH_tslib.'class.tslib_pibase.php');
  * @package TYPO3
  * @subpackage EXT:html5boilerplate
  */
-class user_html5boilerplate extends tslib_pibase {
-
-	/**
-	 * The extension key
-	 * 
-	 * @var String
-	 */
-	var $extKey = 'html5boilerplate';
+class user_html5boilerplate {
 
 	/**
 	 * 
