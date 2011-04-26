@@ -1,48 +1,69 @@
 <?php
+/***************************************************************
+ *  Copyright notice
+ *
+ *  (c) 2011 html5boilerplate for TYPO3-Team <http://forge.typo3.org/projects/extension-html5boilerplate>
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *  A copy is found in the textfile GPL.txt and important notices to the license
+ *  from the author is found in LICENSE.txt distributed with these scripts.
+ *
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 
 require_once(PATH_tslib.'class.tslib_pibase.php');
 
+/**
+ * Html5boilerplate main class
+ * Includes a render postProcess hook of t3lib_PageRenderer to manipulate
+ * marker for html5boilerplate usage. E.g. a custom <html>-Tag or a 
+ * X-UA-Compatible parameter directly after the <meta charset>-tag
+ *
+ * @package TYPO3
+ * @subpackage EXT:html5boilerplate
+ */
 class user_html5boilerplate extends tslib_pibase {
-	
-	var $extKey = 'html5boilerplate';	// The extension key.
 
+	/**
+	 * The extension key
+	 * 
+	 * @var String
+	 */
+	var $extKey = 'html5boilerplate';
+
+	/**
+	 * 
+	 * Enter description here ...
+	 * @param array 				$params		Array of parameters which will be used as markers directly after the hook is called. For example baseUrl,
+	 * 											htmlTag, cssFiles, favIcon, .... For a full list please have a look at t3lib_PageRenderer->render()
+	 * @param t3lib_PageRenderer	$obj		Instance of t3lib_PageRenderer
+	 */
 	function main($params, &$obj){
-
+			// Get the main configuration
 		$this->conf = $GLOBALS['TSFE']->tmpl->setup['config.']['html5boilerplate.'];
 		
+			// Add the new custom <html>-tag
 		$params['htmlTag'] = $this->conf['htmlTag'];
-		$params['metaCharsetTag'] = $this->conf['metaCharsetTag'] . "\n" . $this->conf['metaCharsetTag.']['insertAfter'];
 		
-//		$params = array (
-//			'jsLibs'               => &$jsLibs,
-//			'jsFiles'              => &$jsFiles,
-//			'jsFooterFiles'        => &$jsFooterFiles,
-//			'cssFiles'             => &$cssFiles,
-//			'headerData'           => &$this->headerData,
-//			'footerData'           => &$this->footerData,
-//			'jsInline'             => &$jsInline,
-//			'cssInline'            => &$cssInline,
-//			'xmlPrologAndDocType'  => &$this->xmlPrologAndDocType,
-//			'htmlTag'              => $htmlTag,
-//			'headTag'              => &$this->headTag,
-//			'charSet'              => &$this->charSet,
-//			'metaCharsetTag'       => '<meta charset="|">',
-//			'shortcutTag'          => &$this->shortcutTag,
-//			'inlineComments'       => &$this->inlineComments,
-//			'baseUrl'              => &$this->baseUrl,
-//			'baseUrlTag'           => &$this->baseUrlTag,
-//			'favIcon'              => &$this->favIcon,
-//			'iconMimeType'         => &$this->iconMimeType,
-//			'titleTag'             => &$this->titleTag,
-//			'title'                => &$this->title,
-//			'metaTags'             => &$metaTags,
-//			'jsFooterInline'       => &$jsFooterInline,
-//			'jsFooterLibs'         => &$jsFooterLibs,
-//			'bodyContent'          => &$this->bodyContent,
-//		);
+			// Add the shorten metaCharset-tag and add additionally
+			// the X-UA-Compatible parameter
+		$params['metaCharsetTag'] = $this->conf['metaCharsetTag'] . "\n" . $this->conf['metaCharsetTag.']['insertAfter'];
 		
 		return $params;
 	}
 }
-
 ?>
