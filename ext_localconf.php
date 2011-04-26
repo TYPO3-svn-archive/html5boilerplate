@@ -6,5 +6,5 @@
  * This is used e.g. to add a custom <html>-tag, to modify the <meta charset>-tag 
  * or to add the X-UA-Compatible parameter directly after the <meta charset>-tag
  */
-$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] = 'EXT:html5boilerplate/class.html5boilerplate.php:user_html5boilerplate->main';
+$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] = 'EXT:html5boilerplate/Classes/class.tx_html5boilerplate.php:tx_html5boilerplate->pageRendererPostProcessHook';
 ?>

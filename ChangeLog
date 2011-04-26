@@ -1,5 +1,6 @@
 2011-04-26 Andy Grunwald  <andreas.grunwald@wmdb.de>
 
+	* Feature #26271: Follow TYPO3-Guidelines by class naming
 	* Feature #26272: Decouple class 'user_html5boilerplate' from 'tslib_pibase'
 	* Task #26270: Add some documentation / usefull comments to existing files
 	* Task #26268: Complete ChangeLog till html5boilerplate 0.4.1

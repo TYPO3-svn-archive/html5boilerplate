@@ -34,16 +34,16 @@
  * @package TYPO3
  * @subpackage EXT:html5boilerplate
  */
-class user_html5boilerplate {
+class tx_html5boilerplate {
 
 	/**
+	 * postProcess-hook of t3lib_PageRenderer to manipulate some marker for correct html5boilerplate usage
 	 * 
-	 * Enter description here ...
 	 * @param array 				$params		Array of parameters which will be used as markers directly after the hook is called. For example baseUrl,
 	 * 											htmlTag, cssFiles, favIcon, .... For a full list please have a look at t3lib_PageRenderer->render()
-	 * @param t3lib_PageRenderer	$obj		Instance of t3lib_PageRenderer
+	 * @param t3lib_PageRenderer	$pObj		Instance of t3lib_PageRenderer
 	 */
-	function main($params, &$obj){
+	function pageRendererPostProcessHook($params, $pObj){
 			// Get the main configuration
 		$this->conf = $GLOBALS['TSFE']->tmpl->setup['config.']['html5boilerplate.'];
 		
