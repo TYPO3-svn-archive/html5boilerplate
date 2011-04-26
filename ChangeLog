@@ -1,5 +1,6 @@
 2011-04-26 Andy Grunwald  <andreas.grunwald@wmdb.de>
 
+	* Fixed bug #26329: If no config for htmlTag and metaCharsetTag is available, there is no <html> and <meta charset>-tag
 	* Fixed bug #26325: XClass-inclusion is missing for Classes/class.tx_html5boilerplate.php
 	* Feature #26271: Follow TYPO3-Guidelines by class naming
 	* Feature #26272: Decouple class 'user_html5boilerplate' from 'tslib_pibase'

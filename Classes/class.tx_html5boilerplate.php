@@ -43,16 +43,26 @@ class tx_html5boilerplate {
 	 * 											htmlTag, cssFiles, favIcon, .... For a full list please have a look at t3lib_PageRenderer->render()
 	 * @param t3lib_PageRenderer	$pObj		Instance of t3lib_PageRenderer
 	 */
-	function pageRendererPostProcessHook($params, $pObj){
+	public function pageRendererPostProcessHook($params, $pObj){
 			// Get the main configuration
-		$this->conf = $GLOBALS['TSFE']->tmpl->setup['config.']['html5boilerplate.'];
-		
+		$conf = $GLOBALS['TSFE']->tmpl->setup['config.']['html5boilerplate.'];
+
 			// Add the new custom <html>-tag
-		$params['htmlTag'] = $this->conf['htmlTag'];
+		if ($conf['htmlTag']) {
+			$params['htmlTag'] = $conf['htmlTag'];
+		}
 		
 			// Add the shorten metaCharset-tag and add additionally
 			// the X-UA-Compatible parameter
-		$params['metaCharsetTag'] = $this->conf['metaCharsetTag'] . "\n" . $this->conf['metaCharsetTag.']['insertAfter'];
+		if ($conf['metaCharsetTag']) {
+			$params['metaCharsetTag'] = $conf['metaCharsetTag'];
+		}
+
+			// Add only other html-tags directly after the metaCharsetTag
+			// if they are available
+		if ($conf['metaCharsetTag.']['insertAfter']) {
+			$params['metaCharsetTag'] .= LF . $conf['metaCharsetTag.']['insertAfter'];
+		}
 		
 		return $params;
 	}
