@@ -45,13 +45,13 @@ class tx_html5boilerplate {
 	 */
 	public function pageRendererPostProcessHook($params, $pObj){
 			// Get the main configuration
-		$conf = $GLOBALS['TSFE']->tmpl->setup['config.']['html5boilerplate.'];
+		$conf = $GLOBALS['TSFE']->config['config']['html5boilerplate.'];
 
 			// Add the new custom <html>-tag
 		if ($conf['htmlTag']) {
 			$params['htmlTag'] = $conf['htmlTag'];
 		}
-		
+
 			// Add the shorten metaCharset-tag and add additionally
 			// the X-UA-Compatible parameter
 		if ($conf['metaCharsetTag']) {
@@ -63,7 +63,7 @@ class tx_html5boilerplate {
 		if ($conf['metaCharsetTag.']['insertAfter']) {
 			$params['metaCharsetTag'] .= LF . $conf['metaCharsetTag.']['insertAfter'];
 		}
-		
+
 		return $params;
 	}
 }
