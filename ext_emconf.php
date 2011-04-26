@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array(
 Read more at html5boilerplate.com',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '0.4.1',
+	'version' => '0.5.0-dev',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
