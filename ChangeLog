@@ -1,3 +1,12 @@
+2011-04-26 Andy Grunwald  <andreas.grunwald@wmdb.de>
+
+	* Task #26268: Complete ChangeLog till html5boilerplate 0.4.1
+	* Task #26267: Delete doc/wizard_*-Files
+
+2011-04-03 Einar Gislason  <einar@linkfactory.dk>
+
+	* Release of html5boilerplate 0.4.1
+
 2011-03-14 Einar Gislason  <einar@linkfactory.dk>
 
 	* initial code generated with kickstarter
