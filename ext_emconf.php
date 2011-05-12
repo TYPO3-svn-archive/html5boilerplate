@@ -13,7 +13,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'HTML5 Boilerplate',
 	'description' => 'HTML5 Boilerplate implemented in TYPO3.
-Read more at html5boilerplate.com',
+Read more and get involved at forge.typo3.org/projects/show/extension-html5boilerplate',
 	'category' => 'fe',
 	'shy' => 0,
 	'version' => '0.5.0-dev',
@@ -28,7 +28,7 @@ Read more at html5boilerplate.com',
 	'modify_tables' => '',
 	'clearcacheonload' => 0,
 	'lockType' => '',
-	'author' => 'Einar Gislason',
+	'author' => 'TYPO3 HTML5 Boilerplate team',
 	'author_email' => 'einarsvan@gmail.com',
 	'author_company' => '',
 	'CGLcompliance' => '',
