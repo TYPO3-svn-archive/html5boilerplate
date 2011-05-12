@@ -1,3 +1,11 @@
+
+2011-05-12 Einar Gislason  <einar@linkfactory.dk>
+	
+	* Removed Templavoila reference from config setup file
+	* Created a folder for example typescript configurations
+	* Added a templavoila.txt typoscript example 
+	* Task #26599: Updated the manual with a little bit more info on working with other jQuery extensions
+
 2011-04-27 Andy Grunwald  <andreas.grunwald@wmdb.de>
 
 	* Task #26269: Fill Readme.txt with usefull information about this project
