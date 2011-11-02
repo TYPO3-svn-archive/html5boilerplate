@@ -23,7 +23,7 @@ config.html5boilerplate{
 ### General site config
 config {
 	# html5? Yes, please!
-	doctype = html_5
+	doctype = html5
 	
 	# XML? No, thank you!
 	xmlprologue = none
