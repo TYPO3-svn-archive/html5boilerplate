@@ -31,9 +31,6 @@ config {
 	
 	### Taking out the trash, aka. cleaning up the code
 	
-	# Tries to clean up the output. Tries...
-	xhtml_cleaning = all
-	
 	# If set, the stdWrap property “prefixComment” will be disabled, thus preventing any revealing and space-consuming comments in the HTML source code.
 	disablePrefixComment = 1
 	
