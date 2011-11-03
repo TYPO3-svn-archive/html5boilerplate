@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array(
 Read more and get involved at forge.typo3.org/projects/show/extension-html5boilerplate',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '0.5.0',
+	'version' => '0.6.0 - work in progress',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
