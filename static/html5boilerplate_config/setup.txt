@@ -46,7 +46,9 @@ config {
 	
 	# If set inline or externalized (see removeDefaultJS above) JavaScript will be minified. 
 	# Minification will remove all excess space and cause faster page loading.
-	minifyJS = 1
+	#minifyJS = 1
+	minifyJS >
+	compressJs = 1
 	
 	# Add L and print values to all links in TYPO3.
 	linkVars = L, print
