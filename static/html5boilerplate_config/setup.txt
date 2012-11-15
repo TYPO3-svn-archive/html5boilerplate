@@ -5,11 +5,12 @@
 config.html5boilerplate{
 	# This replaces the html tag with some conditional comments for IE and a no-js class
 	htmlTag (
-	<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-	<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-	<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-	<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-	<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+	
+	<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="{$config.language}"> <![endif]-->
+	<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="{$config.language}"> <![endif]-->
+	<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="{$config.language}"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang="{$config.language}"> <!--<![endif]-->
+	
 	)
 
 	# Make sure the meta charset is short and sweet
@@ -23,7 +24,6 @@ config.html5boilerplate{
 ### General site config
 config {
 	# html5? Yes, please!
-	#doctype = html_5
 	doctype = html5
 	
 	# XML? No, thank you!
@@ -31,9 +31,6 @@ config {
 	
 	
 	### Taking out the trash, aka. cleaning up the code
-	
-	# Tries to clean up the output. Tries...
-	xhtml_cleaning = all
 	
 	# If set, the stdWrap property “prefixComment” will be disabled, thus preventing any revealing and space-consuming comments in the HTML source code.
 	disablePrefixComment = 1
@@ -115,4 +112,19 @@ config {
 	### Headercomment - inserted before the TYPO3 comment in header
 	headerComment = {$config.headerComment}
 	
+}
+
+### Set up the page object
+### The page object is defined here. An example of how to use Templavoila can be found in the example_config folder
+page = PAGE
+page {
+
+	typeNum = 0
+	
+	meta {
+		description.field = description
+		keywords.field = keywords	
+		author.field = author
+		viewport = width=device-width,initial-scale=1
+	}
 }
