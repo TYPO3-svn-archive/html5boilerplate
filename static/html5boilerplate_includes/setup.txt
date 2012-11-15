@@ -1,0 +1,34 @@
+### Includes - setup ###
+### HTML5BOILERPLATE ###
+
+# Include CSS files
+page.includeCSS{
+	
+	# This is the default HTML5 Boilerplate stylesheet. This should be the first stylesheet in the header
+	# There are more css files in the Boilerplate css folder (EXT:html5boilerplate/res/css)
+	boilerplate = EXT:html5boilerplate/res/css/style.css
+	
+	# Your main css file can be inserted here
+	main = {$page.includeCSS.main}
+		
+}
+
+
+# Include Modernizr as the last script in the header
+page.headerData.200 = TEXT
+page.headerData.200.value = <script src="typo3conf/ext/html5boilerplate/res/js/libs/modernizr-2.0.6.min.js"></script>
+
+
+# Include jQuery from Google Libraries API
+page.includeJSFooterlibs{
+	jquery = //ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js
+	jquery.external = 1
+}
+
+# Javascript at the bottom of the page
+page.includeJSFooter{
+	# Helper plugins, log and console.log
+	plugins = typo3conf/ext/html5boilerplate/res/js/plugins.js
+	# Include main js file
+	main = {$page.includeJSFooter.main}
+}
